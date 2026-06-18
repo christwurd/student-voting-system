@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote - CWU Student Voting System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="voting-page">
+    <!-- Progress Steps -->
+    <div class="voting-progress">
+        <div class="progress-container">
+            <div class="progress-step active">
+                <div class="step-number">1</div>
+                <span class="step-label">Verify ID</span>
+            </div>
+            <div class="progress-line"></div>
+            <div class="progress-step active">
+                <div class="step-number">2</div>
+                <span class="step-label">Review Candidates</span>
+            </div>
+            <div class="progress-line"></div>
+            <div class="progress-step">
+                <div class="step-number">3</div>
+                <span class="step-label">Cast Vote</span>
+            </div>
+            <div class="progress-line"></div>
+            <div class="progress-step">
+                <div class="step-number">4</div>
+                <span class="step-label">Confirm</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="voting-container">
+        <div class="voting-header glass-effect">
+            <a href="student-dashboard.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i>
+                Back to Dashboard
+            </a>
+            <div class="election-title">
+                <i class="fas fa-crown"></i>
+                <div>
+                    <h1>Student Council President 2026</h1>
+                    <p>Select your preferred candidate</p>
+                </div>
+            </div>
+            <div class="election-timer">
+                <i class="fas fa-clock"></i>
+                <span>Time Remaining: <strong>14d 8h 22m</strong></span>
+            </div>
+        </div>
+
+        <div class="candidates-grid">
+            <!-- Candidate 1 -->
+            <div class="candidate-card glass-effect" onclick="selectCandidate(this, 'candidate1')">
+                <div class="candidate-photo">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop" alt="Alex Chen">
+                    <div class="candidate-badge">President</div>
+                </div>
+                <div class="candidate-info">
+                    <h3>Alex Chen</h3>
+                    <p class="candidate-position">Computer Engineering - 4th Year</p>
+                    <div class="candidate-manifesto">
+                        <h4>Campaign Platform:</h4>
+                        <ul>
+                            <li>Expand public broadband access across campus</li>
+                            <li>Reform education funding equity</li>
+                            <li>Accelerate green infrastructure investment</li>
+                            <li>Promote inclusivity and transparency</li>
+                            <li>Strengthen student-led initiatives</li>
+                        </ul>
+                    </div>
+                    <div class="candidate-social">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fas fa-globe"></i></a>
+                    </div>
+                </div>
+                <div class="candidate-action">
+                    <button class="btn btn-select" type="button">
+                        <i class="fas fa-check-circle"></i>
+                        Select
+                    </button>
+                </div>
+            </div>
+
+            <!-- Candidate 2 -->
+            <div class="candidate-card glass-effect" onclick="selectCandidate(this, 'candidate2')">
+                <div class="candidate-photo">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop" alt="Maya Rodriguez">
+                    <div class="candidate-badge">President</div>
+                </div>
+                <div class="candidate-info">
+                    <h3>Maya Rodriguez</h3>
+                    <p class="candidate-position">Business Administration - 3rd Year</p>
+                    <div class="candidate-manifesto">
+                        <h4>Campaign Platform:</h4>
+                        <ul>
+                            <li>Support academic wellness programs</li>
+                            <li>Expand mentorship opportunities</li>
+                            <li>Streamline event approval processes</li>
+                            <li>Enhance student-faculty communication</li>
+                            <li>Create more internship partnerships</li>
+                        </ul>
+                    </div>
+                    <div class="candidate-social">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fas fa-globe"></i></a>
+                    </div>
+                </div>
+                <div class="candidate-action">
+                    <button class="btn btn-select" type="button">
+                        <i class="fas fa-check-circle"></i>
+                        Select
+                    </button>
+                </div>
+            </div>
+
+            <!-- Candidate 3 -->
+            <div class="candidate-card glass-effect" onclick="selectCandidate(this, 'candidate3')">
+                <div class="candidate-photo">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=300&fit=crop" alt="James Okoro">
+                    <div class="candidate-badge">President</div>
+                </div>
+                <div class="candidate-info">
+                    <h3>James Okoro</h3>
+                    <p class="candidate-position">Electrical Engineering - 4th Year</p>
+                    <div class="candidate-manifesto">
+                        <h4>Campaign Platform:</h4>
+                        <ul>
+                            <li>Improve communication flow</li>
+                            <li>Digitize meeting records</li>
+                            <li>Ensure timely updates for all members</li>
+                            <li>Boost campus sustainability</li>
+                            <li>Increase student welfare support</li>
+                        </ul>
+                    </div>
+                    <div class="candidate-social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fas fa-globe"></i></a>
+                    </div>
+                </div>
+                <div class="candidate-action">
+                    <button class="btn btn-select" type="button">
+                        <i class="fas fa-check-circle"></i>
+                        Select
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="voting-actions">
+            <button class="btn btn-outline" onclick="clearSelection()">
+                <i class="fas fa-undo"></i>
+                Clear Selection
+            </button>
+            <button class="btn btn-primary btn-lg" onclick="confirmVote()" id="voteBtn" disabled>
+                <i class="fas fa-vote-yea"></i>
+                Submit Your Vote
+            </button>
+        </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div id="confirmModal" class="modal">
+        <div class="modal-content glass-effect">
+            <div class="modal-header">
+                <i class="fas fa-exclamation-circle"></i>
+                <h2>Confirm Your Vote</h2>
+            </div>
+            <div class="modal-body">
+                <p>You are about to vote for:</p>
+                <div class="selected-candidate-info">
+                    <h3 id="selectedCandidateName">Candidate Name</h3>
+                    <p>Position: Student Council President</p>
+                </div>
+                <p class="warning-text">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    This action cannot be undone. Please confirm your choice carefully.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline" onclick="closeModal()">Cancel</button>
+                <button class="btn btn-primary" onclick="submitVote()">
+                    <i class="fas fa-check"></i>
+                    Yes, Submit Vote
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="alertContainer" class="alert-container"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+    <script>
+        let selectedCandidate = null;
+
+        function selectCandidate(element, candidateId) {
+            // Remove selection from all cards
+            document.querySelectorAll('.candidate-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+            
+            // Add selection to clicked card
+            element.classList.add('selected');
+            selectedCandidate = {
+                id: candidateId,
+                name: element.querySelector('h3').textContent
+            };
+            
+            // Enable vote button
+            document.getElementById('voteBtn').disabled = false;
+            
+            // Update modal
+            document.getElementById('selectedCandidateName').textContent = selectedCandidate.name;
+        }
+
+        function clearSelection() {
+            document.querySelectorAll('.candidate-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+            selectedCandidate = null;
+            document.getElementById('voteBtn').disabled = true;
+        }
+
+        function confirmVote() {
+            if (!selectedCandidate) {
+                showAlert('Error', 'Please select a candidate first!', 'error');
+                return;
+            }
+            document.getElementById('confirmModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('confirmModal').style.display = 'none';
+        }
+
+        async function submitVote() {
+            try {
+                const { data: { user } } = await supabase.auth.getUser();
+                
+                const { error } = await supabase
+                    .from('votes')
+                    .insert([{
+                        election_id: 'election_2026_president',
+                        candidate_id: selectedCandidate.id,
+                        voter_id: user.id,
+                        timestamp: new Date().toISOString()
+                    }]);
+
+                if (error) throw error;
+
+                closeModal();
+                showAlert('Success', 'Your vote has been submitted successfully!', 'success');
+                
+                setTimeout(() => {
+                    window.location.href = 'vote-success.html';
+                }, 2000);
+
+            } catch (error) {
+                showAlert('Error', error.message, 'error');
+            }
+        }
+
+        // Close modal on outside click
+        window.onclick = function(event) {
+            const modal = document.getElementById('confirmModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>

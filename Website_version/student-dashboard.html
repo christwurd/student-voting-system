@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - CWU Voting System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dashboard-page">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <i class="fas fa-university"></i>
+            <span>CWU Voting</span>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="#" class="nav-item active">
+                <i class="fas fa-home"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="voting.html" class="nav-item">
+                <i class="fas fa-vote-yea"></i>
+                <span>Active Elections</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-history"></i>
+                <span>Voting History</span>
+            </a>
+            <a href="results.html" class="nav-item">
+                <i class="fas fa-chart-bar"></i>
+                <span>Results</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-user"></i>
+                <span>Profile</span>
+            </a>
+            <a href="#" class="nav-item" onclick="handleLogout()">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Top Header -->
+        <header class="top-header glass-effect">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="header-search">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search elections...">
+            </div>
+            <div class="header-actions">
+                <button class="notification-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="badge">3</span>
+                </button>
+                <div class="user-profile">
+                    <img src="https://ui-avatars.com/api/?name=John+Doe&background=6366f1&color=fff" alt="User">
+                    <div class="user-info">
+                        <span class="user-name">John Doe</span>
+                        <span class="user-role">Student</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Dashboard Content -->
+        <div class="dashboard-container">
+            <!-- Welcome Section -->
+            <div class="welcome-section">
+                <h1>Welcome back, John! 👋</h1>
+                <p>Here's what's happening with your elections today.</p>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card glass-effect">
+                    <div class="stat-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)">
+                        <i class="fas fa-ballot"></i>
+                    </div>
+                    <div class="stat-details">
+                        <h3>5</h3>
+                        <p>Active Elections</p>
+                    </div>
+                </div>
+                <div class="stat-card glass-effect">
+                    <div class="stat-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%)">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="stat-details">
+                        <h3>2</h3>
+                        <p>Voted</p>
+                    </div>
+                </div>
+                <div class="stat-card glass-effect">
+                    <div class="stat-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-details">
+                        <h3>3</h3>
+                        <p>Pending Votes</p>
+                    </div>
+                </div>
+                <div class="stat-card glass-effect">
+                    <div class="stat-icon" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="stat-details">
+                        <h3>12</h3>
+                        <p>Completed</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Active Elections -->
+            <div class="section">
+                <div class="section-header">
+                    <h2>Active Elections</h2>
+                    <a href="voting.html" class="btn btn-primary btn-sm">View All</a>
+                </div>
+                <div class="elections-list">
+                    <div class="election-item glass-effect">
+                        <div class="election-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <div class="election-info">
+                            <h3>Student Council President 2026</h3>
+                            <p>Elect your student council president for the 2026-2027 academic year</p>
+                            <div class="election-meta">
+                                <span><i class="fas fa-calendar"></i> Ends: Apr 2, 2026</span>
+                                <span><i class="fas fa-users"></i> 1,284 voted</span>
+                            </div>
+                        </div>
+                        <div class="election-actions">
+                            <div class="countdown">
+                                <div class="time-unit">
+                                    <span class="time-value">14</span>
+                                    <span class="time-label">days</span>
+                                </div>
+                                <div class="time-unit">
+                                    <span class="time-value">08</span>
+                                    <span class="time-label">hours</span>
+                                </div>
+                                <div class="time-unit">
+                                    <span class="time-value">22</span>
+                                    <span class="time-label">mins</span>
+                                </div>
+                            </div>
+                            <a href="voting.html" class="btn btn-primary">Vote Now</a>
+                        </div>
+                    </div>
+
+                    <div class="election-item glass-effect">
+                        <div class="election-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="election-info">
+                            <h3>Department Representatives</h3>
+                            <p>Choose your department representatives for Computer Engineering</p>
+                            <div class="election-meta">
+                                <span><i class="fas fa-calendar"></i> Ends: Mar 28, 2026</span>
+                                <span><i class="fas fa-users"></i> 856 voted</span>
+                            </div>
+                        </div>
+                        <div class="election-actions">
+                            <div class="countdown">
+                                <div class="time-unit">
+                                    <span class="time-value">09</span>
+                                    <span class="time-label">days</span>
+                                </div>
+                                <div class="time-unit">
+                                    <span class="time-value">03</span>
+                                    <span class="time-label">hours</span>
+                                </div>
+                                <div class="time-unit">
+                                    <span class="time-value">11</span>
+                                    <span class="time-label">mins</span>
+                                </div>
+                            </div>
+                            <a href="voting.html" class="btn btn-primary">Vote Now</a>
+                        </div>
+                    </div>
+
+                    <div class="election-item glass-effect">
+                        <div class="election-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div class="election-info">
+                            <h3>Club Leadership Elections</h3>
+                            <p>Elect leaders for various student clubs and organizations</p>
+                            <div class="election-meta">
+                                <span><i class="fas fa-calendar"></i> Ends: Apr 10, 2026</span>
+                                <span><i class="fas fa-users"></i> 432 voted</span>
+                            </div>
+                        </div>
+                        <div class="election-actions">
+                            <div class="countdown">
+                                <div class="time-unit">
+                                    <span class="time-value">21</span>
+                                    <span class="time-label">days</span>
+                                </div>
+                                <div class="time-unit">
+                                    <span class="time-value">14</span>
+                                    <span class="time-label">hours</span>
+                                </div>
+                                <div class="time-unit">
+                                    <span class="time-value">37</span>
+                                    <span class="time-label">mins</span>
+                                </div>
+                            </div>
+                            <a href="voting.html" class="btn btn-primary">Vote Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="section">
+                <div class="section-header">
+                    <h2>Recent Activity</h2>
+                </div>
+                <div class="activity-list glass-effect">
+                    <div class="activity-item">
+                        <div class="activity-icon success">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="activity-content">
+                            <h4>Voted Successfully</h4>
+                            <p>You cast your vote for Student Council President</p>
+                            <span class="activity-time">2 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon info">
+                            <i class="fas fa-info"></i>
+                        </div>
+                        <div class="activity-content">
+                            <h4>New Election Available</h4>
+                            <p>Department Representatives election is now open</p>
+                            <span class="activity-time">5 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon warning">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="activity-content">
+                            <h4>Election Ending Soon</h4>
+                            <p>Club Leadership Elections ends in 3 days</p>
+                            <span class="activity-time">1 day ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+    <script>
+        // Check authentication
+        checkAuth();
+        
+        // Sidebar toggle
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            document.getElementById('sidebar').classList.toggle('active');
+        });
+
+        function handleLogout() {
+            if(confirm('Are you sure you want to logout?')) {
+                supabase.auth.signOut();
+                window.location.href = 'index.html';
+            }
+        }
+    </script>
+</body>
+</html>

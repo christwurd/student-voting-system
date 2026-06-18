@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CWU Student Voting System - Cyprus West University</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar glass-effect">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-university"></i>
+                <span>CWU Voting</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#elections" class="nav-link">Elections</a></li>
+                <li><a href="login.html" class="btn btn-primary">Login</a></li>
+                <li><a href="register.html" class="btn btn-secondary">Register</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg-animation">
+            <div class="floating-shape shape-1"></div>
+            <div class="floating-shape shape-2"></div>
+            <div class="floating-shape shape-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-shield-alt"></i>
+                <span>Secure & Transparent Voting</span>
+            </div>
+            <h1 class="hero-title">
+                Student Voting System
+                <span class="gradient-text">Cyprus West University</span>
+            </h1>
+            <p class="hero-subtitle">
+                Empowering students with a secure, transparent, and efficient digital voting platform. 
+                Your voice matters - make it count.
+            </p>
+            <div class="hero-actions">
+                <a href="register.html" class="btn btn-primary btn-lg">
+                    <i class="fas fa-vote-yea"></i>
+                    Vote Now
+                </a>
+                <a href="#about" class="btn btn-outline btn-lg">
+                    Learn More
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-card glass-effect">
+                    <i class="fas fa-users"></i>
+                    <div class="stat-info">
+                        <span class="stat-number" data-target="2500">0</span>
+                        <span class="stat-label">Registered Voters</span>
+                    </div>
+                </div>
+                <div class="stat-card glass-effect">
+                    <i class="fas fa-ballot-check"></i>
+                    <div class="stat-info">
+                        <span class="stat-number" data-target="15">0</span>
+                        <span class="stat-label">Active Elections</span>
+                    </div>
+                </div>
+                <div class="stat-card glass-effect">
+                    <i class="fas fa-check-circle"></i>
+                    <div class="stat-info">
+                        <span class="stat-number" data-target="99">0</span>
+                        <span class="stat-label">% Accuracy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="about" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Our Voting System?</h2>
+                <p>Modern, secure, and designed for students</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card glass-effect">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Secure Authentication</h3>
+                    <p>Multi-layer security with student ID verification and encrypted data protection</p>
+                </div>
+                <div class="feature-card glass-effect">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Accessible Anywhere</h3>
+                    <p>Vote from any device - desktop, tablet, or mobile with responsive design</p>
+                </div>
+                <div class="feature-card glass-effect">
+                    <div class="feature-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3>Real-Time Results</h3>
+                    <p>Instant vote counting and live election results with detailed analytics</p>
+                </div>
+                <div class="feature-card glass-effect">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3>One Vote Per Student</h3>
+                    <p>Advanced validation prevents duplicate voting and ensures fairness</p>
+                </div>
+                <div class="feature-card glass-effect">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Transparent Process</h3>
+                    <p>Complete audit trail and verifiable election records for accountability</p>
+                </div>
+                <div class="feature-card glass-effect">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Time Efficient</h3>
+                    <p>Eliminate long queues and manual counting - vote in minutes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Active Elections Preview -->
+    <section id="elections" class="elections-preview">
+        <div class="container">
+            <div class="section-header">
+                <h2>Active Elections</h2>
+                <p>Participate in ongoing student elections</p>
+            </div>
+            <div class="elections-grid">
+                <div class="election-card featured glass-effect">
+                    <div class="election-badge">Active</div>
+                    <div class="election-header">
+                        <i class="fas fa-crown"></i>
+                        <h3>Student Council President 2026</h3>
+                    </div>
+                    <p class="election-description">Elect your student council president for the 2026-2027 academic year</p>
+                    <div class="election-timer">
+                        <div class="timer-item">
+                            <span class="timer-value" id="days">14</span>
+                            <span class="timer-label">Days</span>
+                        </div>
+                        <div class="timer-item">
+                            <span class="timer-value" id="hours">08</span>
+                            <span class="timer-label">Hours</span>
+                        </div>
+                        <div class="timer-item">
+                            <span class="timer-value" id="minutes">22</span>
+                            <span class="timer-label">Mins</span>
+                        </div>
+                        <div class="timer-item">
+                            <span class="timer-value" id="seconds">17</span>
+                            <span class="timer-label">Secs</span>
+                        </div>
+                    </div>
+                    <div class="election-progress">
+                        <div class="progress-info">
+                            <span>Voter Turnout</span>
+                            <span>68%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 68%"></div>
+                        </div>
+                    </div>
+                    <a href="login.html" class="btn btn-primary btn-block">Vote Now</a>
+                </div>
+                
+                <div class="election-card glass-effect">
+                    <div class="election-badge active">Active</div>
+                    <div class="election-header">
+                        <i class="fas fa-users"></i>
+                        <h3>Department Representatives</h3>
+                    </div>
+                    <p class="election-description">Choose your department representatives</p>
+                    <div class="election-meta">
+                        <span><i class="fas fa-calendar"></i> Ends: Apr 2, 2026</span>
+                        <span><i class="fas fa-users"></i> 1,284 voted</span>
+                    </div>
+                    <a href="login.html" class="btn btn-outline btn-block">View Details</a>
+                </div>
+
+                <div class="election-card glass-effect">
+                    <div class="election-badge upcoming">Upcoming</div>
+                    <div class="election-header">
+                        <i class="fas fa-handshake"></i>
+                        <h3>Club Leadership Elections</h3>
+                    </div>
+                    <p class="election-description">Elect leaders for various student clubs</p>
+                    <div class="election-meta">
+                        <span><i class="fas fa-calendar"></i> Starts: Apr 10, 2026</span>
+                    </div>
+                    <button class="btn btn-outline btn-block" disabled>Not Yet Started</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4><i class="fas fa-university"></i> Cyprus West University</h4>
+                    <p>Empowering students through democratic digital voting solutions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="register.html">Register</a></li>
+                        <li><a href="#elections">Active Elections</a></li>
+                        <li><a href="#">Help Center</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> voting@cwu.edu.tr</li>
+                        <li><i class="fas fa-phone"></i> +90 392 123 4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Famagusta, North Cyprus</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Cyprus West University. All rights reserved. | COEN401 Engineering Design Project</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
