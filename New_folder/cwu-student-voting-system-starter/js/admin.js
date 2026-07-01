@@ -1,1 +1,27 @@
-document.addEventListener("DOMContentLoaded",()=>{const form=document.querySelector("#candidateForm");const table=document.querySelector("#candidateTable tbody");function renderTable(){if(!table)return;table.innerHTML=DEMO_CANDIDATES.map(c=>`<tr><td>${c.name}</td><td>${c.position}</td><td>${c.department}</td><td><span class="badge">Approved</span></td></tr>`).join("")}renderTable();if(form){form.addEventListener("submit",e=>{e.preventDefault();showToast("Candidate saved in demo mode. Supabase connection comes next.");form.reset()})}});
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector("#candidateForm");
+  const table = document.querySelector("#candidateTable tbody");
+
+  function renderTable() {
+    if (!table) return;
+    
+    table.innerHTML = DEMO_CANDIDATES.map(c => `
+      <tr>
+        <td>${c.name}</td>
+        <td>${c.position}</td>
+        <td>${c.department}</td>
+        <td><span class="badge">Approved</span></td>
+      </tr>
+    `).join("");
+  }
+
+  renderTable();
+
+  if (form) {
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+      showToast("Candidate saved in demo mode. Supabase connection comes next.");
+      form.reset();
+    });
+  }
+});

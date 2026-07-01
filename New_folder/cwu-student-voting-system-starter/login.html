@@ -1,1 +1,133 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Login | CWU Student Voting System</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css"></head><body><main class="auth-page"><section class="auth-left"><a class="brand" href="index.html"><div class="brand-mark">CWU</div><div class="brand-text"><h3>CYPRUS WEST<br>UNIVERSITY</h3><span>Student Voting System</span></div></a><div><span class="badge" style="background:rgba(255,255,255,.14);color:white;">Official Election Portal</span><h1>Your Voice.<br>Our Future.</h1><p>Secure, transparent, and accessible student elections for Cyprus West University.</p></div><small>© 2026 Cyprus West University. Final Year Graduation Project.</small></section><section class="auth-right"><form id="loginForm" class="auth-card card fade-up"><div class="brand"><div class="brand-mark">CWU</div><div class="brand-text"><h3>Welcome Back</h3><span>Sign in to continue</span></div></div><h2>Student Login</h2><p>Use demo ID <strong>21200854</strong> and password <strong>password</strong>.</p><div class="input-group"><label for="identifier">Student ID or Email</label><input id="identifier" type="text" placeholder="21200854 or student@cwu.edu"></div><div class="input-group"><label for="password">Password</label><input id="password" type="password" placeholder="Enter password"></div><button class="btn btn-primary full" type="submit">Sign In</button><p class="form-note">For admin demo, use <strong>admin@cwu.edu</strong> and password <strong>password</strong>.</p></form></section></main><div class="toast"></div><script src="js/main.js"></script><script src="js/auth.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Login | CWU Student Voting System</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" 
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Authentication Page -->
+  <main class="auth-page">
+
+    <!-- Left Branding Section -->
+    <section class="auth-left">
+
+      <a class="brand" href="index.html">
+        <div class="brand-mark">CWU</div>
+
+        <div class="brand-text">
+          <h3>
+            CYPRUS WEST<br>
+            UNIVERSITY
+          </h3>
+          <span>Student Voting System</span>
+        </div>
+      </a>
+
+      <div>
+        <span 
+          class="badge" 
+          style="background: rgba(255,255,255,.14); color: white;"
+        >
+          Official Election Portal
+        </span>
+
+        <h1>
+          Your Voice.<br>
+          Our Future.
+        </h1>
+
+        <p>
+          Secure, transparent, and accessible student elections for Cyprus West University.
+        </p>
+      </div>
+
+      <small>
+        © 2026 Cyprus West University. Final Year Graduation Project.
+      </small>
+
+    </section>
+
+    <!-- Right Login Section -->
+    <section class="auth-right">
+
+      <form id="loginForm" class="auth-card card fade-up">
+
+        <div class="brand">
+          <div class="brand-mark">CWU</div>
+
+          <div class="brand-text">
+            <h3>Welcome Back</h3>
+            <span>Sign in to continue</span>
+          </div>
+        </div>
+
+        <h2>Student Login</h2>
+
+        <p>
+          Use demo ID <strong>21200854</strong> 
+          and password <strong>password</strong>.
+        </p>
+
+        <div class="input-group">
+          <label for="identifier">
+            Student ID or Email
+          </label>
+
+          <input 
+            id="identifier" 
+            type="text" 
+            placeholder="21200854 or student@cwu.edu"
+          >
+        </div>
+
+        <div class="input-group">
+          <label for="password">
+            Password
+          </label>
+
+          <input 
+            id="password" 
+            type="password" 
+            placeholder="Enter password"
+          >
+        </div>
+
+        <button 
+          class="btn btn-primary full" 
+          type="submit"
+        >
+          Sign In
+        </button>
+
+        <p class="form-note">
+          For admin demo, use <strong>admin@cwu.edu</strong> 
+          and password <strong>password</strong>.
+        </p>
+
+      </form>
+
+    </section>
+
+  </main>
+
+  <div class="toast"></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+
+</body>
+</html>
